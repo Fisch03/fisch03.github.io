@@ -1,0 +1,127 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto:100&display=swap');
+
+html, body {
+  margin: 0;
+  overflow: hidden;
+  height: 100%;
+
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+h1 {
+  font-size: 7em;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 100;
+  text-align: center;
+  margin-top: 0.5em;
+  margin-bottom: 0;
+}
+
+h2 {
+  font-size: 3em;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 100;
+  text-align: center;
+  margin-top: 0.2em;
+  margin-bottom: 0;
+}
+
+h3 {
+  font-size: 1em;
+  font-family: 'Roboto' , sans-serif;
+  font-weight: 100;
+  text-align: center;
+  margin-top: 0
+}
+
+#Logocontainer {
+  top: 66%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.logo {
+  position: absolute;
+  top: 0;
+  width: 40em;
+  height: 40em;
+
+  -webkit-filter: drop-shadow(3px, 3px, 3px, rgba(0, 0, 0, 1))
+  filter: drop-shadow(3px, 3px, 3px, rgba(0, 0, 0, 1))
+
+  -webkit-transition: top 1s;
+  -moz-transition: top 1s;
+  -o-transition: top 1s;
+  transition: top 1s;
+}
+
+.logo.hovered {
+  top: -15px;
+}
+
+#TopicName {
+  font-size: 3em;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 100;
+  text-align: center;
+  padding-top: 69%;
+}
+
+@media (max-width: 1000px) {
+  #Logocontainer {
+    top:50%;
+  }
+}
+
+@media (max-height: 600px) {
+  h1 {
+    font-size: 6em;
+  }
+
+   h2 {
+     font-size: 2em;
+   }
+
+  .logo {
+    width: 25em;
+    height: 25em;
+  }
+
+  #Logocontainer {
+    top: 65%;
+  }
+
+  #TopicName {
+    font-size: 2em;
+    padding-top: 74%;
+  }
+}
+
+@media (max-height: 450px) {
+  h1 {
+    font-size: 5em;
+  }
+
+   h2 {
+     font-size: 1em;
+   }
+
+   h3 {
+     visibility: none;
+     opacity: 0
+   }
+
+  .logo {
+    width: 20em;
+    height: 20em;
+  }
+
+  #TopicName {
+    padding-top: 70%;
+  }
+}
