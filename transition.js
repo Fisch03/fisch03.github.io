@@ -37,14 +37,14 @@ function transitionToTop(targetid) {
   inPage.classList.add("currentpage")
   inPage.classList.add("frombottomease")
 
+  window.location.hash = targetid
+
   setTimeout(function() {
     outPage.classList.remove("currentpage")
     outPage.classList.remove("totop")
     outPage.classList.remove("ontop")
 
     inPage.classList.remove("frombottomease")
-
-    window.location.hash = targetid
   }, 900)
 }
 
@@ -60,13 +60,13 @@ function transitionToBottom(targetid) {
   inPage.classList.add("currentpage")
   inPage.classList.add("fromtopease")
 
+  window.location.hash = targetid
+
   setTimeout(function() {
     outPage.classList.remove("currentpage")
     outPage.classList.remove("tobottom")
     outPage.classList.remove("ontop")
 
     inPage.classList.remove("fromtopease")
-
-    window.location.hash = targetid
   }, 900)
 }
