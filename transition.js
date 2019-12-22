@@ -1,9 +1,13 @@
 let currentPage
+let overrideHashChange
 
 checkHash()
 
 window.onhashchange = function() {
-  checkHash()
+  if(!overrideHashChange) {
+    checkHash()
+  }
+  overrideHashChange = false
 }
 
 function checkHash() {
@@ -37,7 +41,7 @@ function transitionToTop(targetid) {
   inPage.classList.add("currentpage")
   inPage.classList.add("frombottomease")
 
-  window.location.hash = targetid
+  overrideHashChange = true
 
   setTimeout(function() {
     outPage.classList.remove("currentpage")
@@ -45,6 +49,8 @@ function transitionToTop(targetid) {
     outPage.classList.remove("ontop")
 
     inPage.classList.remove("frombottomease")
+
+    window.location.hash = targetid
   }, 900)
 }
 
@@ -60,7 +66,7 @@ function transitionToBottom(targetid) {
   inPage.classList.add("currentpage")
   inPage.classList.add("fromtopease")
 
-  window.location.hash = targetid
+  overrideHashChange = true
 
   setTimeout(function() {
     outPage.classList.remove("currentpage")
@@ -68,5 +74,7 @@ function transitionToBottom(targetid) {
     outPage.classList.remove("ontop")
 
     inPage.classList.remove("fromtopease")
+
+    window.location.hash = targetid
   }, 900)
 }
