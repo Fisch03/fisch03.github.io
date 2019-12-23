@@ -1,6 +1,7 @@
 let currentPage
 let overrideHashChange
 
+document.getElementById("nojs").remove()
 checkHash()
 
 window.onhashchange = function() {
