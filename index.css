@@ -55,6 +55,41 @@ h3 {
   color: #777777;
 }
 
+.maintext {
+  font-size: 1.5rem;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 100;
+  text-align: center;
+}
+
+button {
+  background-color: #000000;
+  color: #FFFFFF;
+
+  border: none;
+  padding: 10px 10px;
+
+  display: block;
+  margin: 0 auto;
+  margin-top: 1.5rem;
+
+  border-radius: 10px;
+
+  font-size: 1.5rem;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 100;
+  text-align: center;
+  text-decoration: none;
+
+  -webkit-transition: brder-radius 0.5s;
+  -moz-transition: border-radius 0.5s;
+  -o-transition: border-radius 0.5s;
+  transition: border-radius 0.5s;
+}
+button:hover {
+  border-radius: 20px;
+}
+
 #Logocontainer {
   top: 60%;
   left: 50%;
