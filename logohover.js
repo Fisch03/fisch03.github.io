@@ -64,9 +64,12 @@ container.onmousemove = function(e) {
 container.onclick = function(e) {
   if(usercanhover) {
     let mousepos = {x: e.offsetX / imgsize.w * 100, y: e.offsetY / imgsize.h * 100}
+    let anyclicked = false
+
     reactiveElements.forEach(function(rect) {
-      if(isInsideRectangle(mousepos, rect)) {
+      if(isInsideRectangle(mousepos, rect) && !anyclicked) {
         transitionToTop(rect.target)
+        anyclicked = true
       }
     })
   } else {
@@ -75,18 +78,21 @@ container.onclick = function(e) {
 
     reactiveElements.forEach(function(rect, index) {
       if(isInsideRectangle(mousepos, rect)) {
-        anyclicked = true
-        if (selectedElement == index) {
+        if(selectedElement == rect.i && !anyclicked) {
           transitionToTop(rect.target)
-        } else {
-          selectedElement = index
+          selectedElement = null
+          resetHover()
+        } else if(selectedElement != rect.i && !anyclicked){
+          selectedElement = rect.i
           checkHover(mousepos)
         }
+        anyclicked = true
       }
     })
 
-    if(!anyclicked)
+    if(!anyclicked) {
       selectedElement = null
+    }
   }
 }
 
@@ -111,6 +117,14 @@ function checkHover(mousepos) {
     blendTopic("")
     currentTopicIndex = 0
   }
+}
+
+function resetHover() {
+  reactiveElements.forEach(function(rect) {
+    rect.el.classList.remove("hovered")
+    blendTopic("")
+    currentTopicIndex = 0
+  })
 }
 
 function blendTopic(newTopic) {
