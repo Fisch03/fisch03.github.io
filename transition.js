@@ -17,16 +17,20 @@ function checkHash() {
     Array.from(document.getElementsByClassName("page")).forEach(function(page) {page.classList.remove("currentpage")})
     currentPage = document.getElementById(window.location.hash.substring(1))
     currentPage.classList.add("currentpage")
+  } else if (!document.getElementById(window.location.hash.substring(1))) {
+    window.location.href = "./404.html"
   } else if(document.getElementsByClassName("currentpage").length == 0) {
     currentPage = document.getElementById(window.location.hash.substring(1))
     currentPage.classList.add("currentpage")
   }
-  if(window.location.hash.substring(1) == "Home" && document.getElementsByClassName("currentpage").item(0).id != "Home") {
-    currentPage = document.getElementsByClassName("currentpage").item(0)
-    transitionToBottom("Home")
-  } else if(window.location.hash.substring(1) != "Home" && document.getElementsByClassName("currentpage").item(0).id == "Home") {
-    currentPage = document.getElementsByClassName("currentpage").item(0)
-    transitionToTop(window.location.hash.substring(1))
+  if(document.getElementById(window.location.hash.substring(1))) {
+    if(window.location.hash.substring(1) == "Home" && document.getElementsByClassName("currentpage").item(0).id != "Home") {
+      currentPage = document.getElementsByClassName("currentpage").item(0)
+      transitionToBottom("Home")
+    } else if(window.location.hash.substring(1) != "Home" && document.getElementsByClassName("currentpage").item(0).id == "Home") {
+      currentPage = document.getElementsByClassName("currentpage").item(0)
+      transitionToTop(window.location.hash.substring(1))
+    }
   }
 }
 
