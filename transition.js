@@ -18,7 +18,7 @@ function checkHash() {
     currentPage = document.getElementById(window.location.hash.substring(1))
     currentPage.classList.add("currentpage")
   } else if (!document.getElementById(window.location.hash.substring(1))) {
-    window.location.href = "./404.html"
+    window.location.replace("./404.html")
   } else if(document.getElementsByClassName("currentpage").length == 0) {
     currentPage = document.getElementById(window.location.hash.substring(1))
     currentPage.classList.add("currentpage")
