@@ -12,24 +12,29 @@ window.onhashchange = function() {
 }
 
 function checkHash() {
-  if(!window.location.hash) {
-    window.location.hash = document.getElementsByClassName("page").item(0).id
-    Array.from(document.getElementsByClassName("page")).forEach(function(page) {page.classList.remove("currentpage")})
-    currentPage = document.getElementById(window.location.hash.substring(1))
+  let hash = window.location.hash.substring(1)
+  let pageByHash = document.getElementById(hash)
+  let allPages = document.getElementsByClassName("page")
+  let allCurrentPages = document.getElementsByClassName("currentpage")
+
+  if(!window.location.hash) { //Check if a Hash is entered, if not, take the first "page" as hash location and make it the current Page
+    window.location.hash = allPages.item(0).id
+    Array.from(allPages).forEach(function(page) {page.classList.remove("currentpage")})
+    currentPage = pageByHash
     currentPage.classList.add("currentpage")
-  } else if (!document.getElementById(window.location.hash.substring(1))) {
+  } else if (!pageByHash) {
     window.location.replace("./404.html")
-  } else if(document.getElementsByClassName("currentpage").length == 0) {
-    currentPage = document.getElementById(window.location.hash.substring(1))
+  } else if(allCurrentPages.length == 0) {
+    currentPage = pageByHash
     currentPage.classList.add("currentpage")
   }
-  if(document.getElementById(window.location.hash.substring(1))) {
-    if(window.location.hash.substring(1) == "Home" && document.getElementsByClassName("currentpage").item(0).id != "Home") {
-      currentPage = document.getElementsByClassName("currentpage").item(0)
+  if(pageByHash) {
+    if(hash == "Home" && allCurrentPages.item(0).id != "Home") {
+      currentPage = allCurrentPages.item(0)
       transitionToBottom("Home")
-    } else if(window.location.hash.substring(1) != "Home" && document.getElementsByClassName("currentpage").item(0).id == "Home") {
-      currentPage = document.getElementsByClassName("currentpage").item(0)
-      transitionToTop(window.location.hash.substring(1))
+    } else if(hash != "Home" && allCurrentPages.item(0).id == "Home") {
+      currentPage = currentpage.item(0)
+      transitionToTop(hash)
     }
   }
 }
