@@ -1,5 +1,10 @@
-  //Position in this file are treated eas percentages of the whole image (top left = (0|0), bottom right = (100|100))
+//Position in this file are treated eas percentages of the whole image (top left = (0|0), bottom right = (100|100))
 //This avoids troubles when scaling the image up and down
+
+//Detect if the user is able to hover
+let usercanhover = !('ontouchstart' in window || navigator.maxTouchPoints)
+
+let selectedElement
 
 const topicText = document.getElementById("TopicName")
 
@@ -57,12 +62,32 @@ container.onmousemove = function(e) {
 }
 
 container.onclick = function(e) {
-  let mousepos = {x: e.offsetX / imgsize.w * 100, y: e.offsetY / imgsize.h * 100}
-  reactiveElements.forEach(function(rect) {
-    if(isInsideRectangle(mousepos, rect)) {
-      transitionToTop(rect.target)
-    }
-  })
+  if(usercanhover) {
+    let mousepos = {x: e.offsetX / imgsize.w * 100, y: e.offsetY / imgsize.h * 100}
+    reactiveElements.forEach(function(rect) {
+      if(isInsideRectangle(mousepos, rect)) {
+        transitionToTop(rect.target)
+      }
+    })
+  } else {
+    let mousepos = {x: e.offsetX / imgsize.w * 100, y: e.offsetY / imgsize.h * 100}
+    let anyclicked = false
+
+    reactiveElements.forEach(function(rect, index) {
+      if(isInsideRectangle(mousepos, rect)) {
+        anyclicked = true
+        if (selectedElement == index) {
+          transitionToTop(rect.target)
+        } else {
+          selectedElement = index
+          checkHover(mousepos)
+        }
+      }
+    })
+
+    if(!anyclicked)
+      selectedElement = null
+  }
 }
 
 function checkHover(mousepos) {

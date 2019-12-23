@@ -9,7 +9,9 @@
     <div class="page" id="Home">
       <h1>Hello!</h1>
       <h2>I make stuff.</h2>
-      <h3>(Click/Tap my logo to find out more!)</h3>
+      <h3 id="HintText"></h3>
+      <!--Update the HintText depending on User Input type-->
+      <script>if(!('ontouchstart' in window||navigator.maxTouchPoints)){document.getElementById("HintText").innerHTML = "(Click my Logo to find out more!)"} else {document.getElementById("HintText").innerHTML = "(Tap/Double Tap my Logo to find out more!)"}</script>
 
       <div class="logo logocontainer" id="Logocontainer">
         <img src="./resources/logoouter.svg" class="logo">
