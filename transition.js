@@ -33,7 +33,7 @@ function checkHash() {
       currentPage = allCurrentPages.item(0)
       transitionToBottom("Home")
     } else if(hash != "Home" && allCurrentPages.item(0).id == "Home") {
-      currentPage = currentpage.item(0)
+      currentPage = allCurrentPages.item(0)
       transitionToTop(hash)
     }
   }
