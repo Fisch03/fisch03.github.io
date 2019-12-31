@@ -37,6 +37,10 @@ h1 {
   margin-bottom: 0;
 }
 
+.spacing {
+  margin-top: 4%;
+}
+
 h2 {
   font-size: 3rem;
   font-family: 'Roboto', sans-serif;
@@ -62,6 +66,25 @@ h3 {
   text-align: center;
 }
 
+.backbutton {
+  position: absolute;
+  width: 4rem;
+  height: 4rem;
+
+  left: 50%;
+  transform: translate(-50%, 0);
+
+  top: 1%;
+
+  -webkit-transition: top 1s;
+  -moz-transition: top 1s;
+  -o-transition: top 1s;
+  transition: top 1s;
+}
+.backbutton:hover {
+  top: -1%;
+}
+
 button {
   background-color: #000000;
   color: #FFFFFF;
@@ -81,7 +104,7 @@ button {
   text-align: center;
   text-decoration: none;
 
-  -webkit-transition: brder-radius 0.5s;
+  -webkit-transition: border-radius 0.5s;
   -moz-transition: border-radius 0.5s;
   -o-transition: border-radius 0.5s;
   transition: border-radius 0.5s;

@@ -88,3 +88,7 @@ function transitionToBottom(targetid) {
     window.location.hash = targetid
   }, 900)
 }
+
+function transitionToHome() { //Can be called from buttons
+  transitionToBottom("Home");
+}
