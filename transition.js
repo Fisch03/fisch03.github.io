@@ -20,7 +20,7 @@ function checkHash() {
   if(!window.location.hash) { //Check if a Hash is entered, if not, take the first "page" as hash location and make it the current Page
     window.location.hash = allPages.item(0).id
     Array.from(allPages).forEach(function(page) {page.classList.remove("currentpage")})
-    currentPage = pageByHash
+    currentPage = document.getElementById(window.location.hash.substring(1))
     currentPage.classList.add("currentpage")
   } else if (!pageByHash) {
     window.location.replace("./404.html")
