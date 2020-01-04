@@ -115,7 +115,7 @@ td {
   left: 50%;
   transform: translate(-50%, 0);
 
-  top: -0.5rem;
+  top: 0.5rem;
 
   -webkit-transition: top 1s;
   -moz-transition: top 1s;
