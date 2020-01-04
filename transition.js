@@ -53,12 +53,16 @@ function transitionToTop(targetid) {
 
   overrideHashChange = true
 
+  document.body.classList.add("hidescroll")
+
   setTimeout(function() {
     outPage.classList.remove("currentpage")
     outPage.classList.remove("totop")
     outPage.classList.remove("ontop")
 
     inPage.classList.remove("frombottomease")
+
+    document.body.classList.remove("hidescroll")
 
     window.location.hash = targetid
   }, 900)
@@ -78,12 +82,16 @@ function transitionToBottom(targetid) {
 
   overrideHashChange = true
 
+  document.body.classList.add("hidescroll")
+
   setTimeout(function() {
     outPage.classList.remove("currentpage")
     outPage.classList.remove("tobottom")
     outPage.classList.remove("ontop")
 
     inPage.classList.remove("fromtopease")
+
+    document.body.classList.remove("hidescroll")
 
     window.location.hash = targetid
   }, 900)
