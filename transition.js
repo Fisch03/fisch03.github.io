@@ -97,6 +97,6 @@ function transitionToBottom(targetid) {
   }, 900)
 }
 
-function transitionToHome() { //Can be called from buttons
-  transitionToBottom("Home");
+function transitionToHome() {
+  transitionToBottom("Home")
 }

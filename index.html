@@ -1,4 +1,5 @@
-<html>
+<!DOCTYPE html>
+<html lang="en">
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -12,7 +13,7 @@
     </div>
     <div class="page" id="Home">
       <h1>Hello!</h1>
-      <h2>I make stuff.</h2>
+      <h2>I make Stuff.</h2>
       <h3 id="HintText"></h3>
       <!--Update the HintText depending on User Input type-->
       <script>if(!('ontouchstart' in window||navigator.maxTouchPoints)){document.getElementById("HintText").innerHTML = "(Click my Logo to find out more!)"} else {document.getElementById("HintText").innerHTML = "(Tap/Double Tap my Logo to find out more!)"}</script>
@@ -28,33 +29,28 @@
     <div class="page" id="Coding">
       <img src="./resources/arrowback.svg" class="backbutton" onclick="transitionToHome();">
       <h1 class="spacing">Coding</h1>
-        <h2>Games</h2>
-        <table>
-          <tr>
-            <td>
-              <a href="https://github.com/Fisch03/Astro-Attack">
-                <div class="imgcontainer"><img src="./resources/coding/astro-attack.png" class="tableimg"></div>
-              </a>
-            </td>
-            <td>
-              <div class="imgcontainer"><img src="./resources/coding/floatingpoints.png" class="tableimg"></div>
-            </td>
-            <td>
-              <a href="https://fisch03.itch.io/grato">
-                <div class="imgcontainer"><img src="./resources/coding/gravitoids.png" class="tableimg"></div>
-              </a>
-            </td>
-          </tr>
-        </table>
-        <h2>Other</h2>
-        <table>
-          <tr>
-            <td>
-              <a href="https://github.com/Fisch03/Hanako-Discord">
-                <div class="imgcontainer"><img src="./resources/coding/hanako.png" class="tableimg"></div>
-              </a>
-          </tr>
-        </table>
+      <h2>Games</h2>
+      <table>
+        <tr>
+          <td>
+            <img src="./resources/coding/astro-attack.png" class="tableimg dohover" onclick="imgToDescription(this)" id="AstroattackImg">
+          </td>
+          <td>
+            <img src="./resources/coding/floatingpoints.png" class="tableimg dohover" onclick="imgToDescription(this)" id="FloatingpointsImg">
+          </td>
+          <td>
+            <img src="./resources/coding/gravitoids.png" class="tableimg dohover" onclick="imgToDescription(this)" id="GravitoidsImg">
+          </td>
+        </tr>
+      </table>
+      <h2>Other</h2>
+      <table>
+        <tr>
+          <td>
+            <img src="./resources/coding/hanako.png" class="tableimg dohover" onclick="imgToDescription(this)" id="HanakoImg">
+          </td>
+        </tr>
+      </table>
     </div>
     <div class="page" id="3D">
       <img src="./resources/arrowback.svg" class="backbutton" onclick="transitionToHome();">
@@ -66,7 +62,9 @@
       <h1 class="spacing">Music</h1>
       <h2>Coming soon...</h2>
     </div>
-    <script src="./transition.js"></script>
-    <script src="./logohover.js"></script>
+    <div id="DescriptionBox" class="hideintop"></div>
   </body>
+  <script src="./transition.js"></script>
+  <script src="./logohover.js"></script>
+  <script src="./descriptionbox.js"></script>
 </html>
