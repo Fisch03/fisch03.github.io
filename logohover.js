@@ -56,7 +56,13 @@ window.addEventListener('resize', function(e) {
   imgsize = {w: container.clientWidth, h: container.clientHeight}
 })
 
-container.onmousemove = function(e) {
+if(!('ontouchstart' in window||navigator.maxTouchPoints)){
+  document.getElementById("HintText").innerHTML = "(Click my Logo to find out more!)"
+} else {
+  document.getElementById("HintText").innerHTML = "(Tap/Double Tap my Logo to find out more!)"
+}
+
+window.onmousemove = function(e) {
   let mousepos = {x: e.offsetX / imgsize.w * 100, y: e.offsetY / imgsize.h * 100}
   checkHover(mousepos)
 }
