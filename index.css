@@ -138,11 +138,31 @@ h4 {
   text-align: center;
 }
 
-table {
-  width: 100%;
-  padding-top: 1.5rem;
-  padding-bottom: 2rem;
+#Logocontainer, #Logocontainer img {
+  position: absolute;
+  top: 0;
+  width: 35rem;
+  height: 35rem;
+
+  -webkit-filter: drop-shadow(3px, 3px, 3px, rgba(0, 0, 0, 1))
+  filter: drop-shadow(3px, 3px, 3px, rgba(0, 0, 0, 1))
+
+  -webkit-transition: top 1s;
+  -moz-transition: top 1s;
+  -o-transition: top 1s;
+  transition: top 1s;
 }
+#Logocontainer img.hovered {
+  top: -2%;
+}
+
+#Logocontainer {
+  top: 60%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+
 
 .flexlist {
   display: flex;
@@ -155,7 +175,7 @@ table {
 
 }
 
-.listitem {
+.flexlist div {
   margin-bottom: 1rem;
   margin-top: 1rem;
 
@@ -164,7 +184,7 @@ table {
   text-align: center;
 }
 
-.tableimg {
+.flexlist div img {
   position: relative;
   width: 15rem;
   margin-left: auto;
@@ -182,7 +202,8 @@ table {
   -o-transition: all 1s;
   transition: all 1s;
 }
-.dohover.tableimg:hover {
+
+.flexlist div img:hover {
   top: -1rem;
 }
 
@@ -276,30 +297,6 @@ button:hover {
   border-radius: 20px;
 }
 
-#Logocontainer {
-  top: 60%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-}
-
-.logo {
-  position: absolute;
-  top: 0;
-  width: 35rem;
-  height: 35rem;
-
-  -webkit-filter: drop-shadow(3px, 3px, 3px, rgba(0, 0, 0, 1))
-  filter: drop-shadow(3px, 3px, 3px, rgba(0, 0, 0, 1))
-
-  -webkit-transition: top 1s;
-  -moz-transition: top 1s;
-  -o-transition: top 1s;
-  transition: top 1s;
-}
-
-.logo.hovered {
-  top: -2%;
-}
 
 #TopicName {
   font-size: 3rem;
@@ -404,7 +401,7 @@ button:hover {
 
 /* MOBILE LAYOUTS */
 @media screen and (max-width: 450px) {
-  .logo {
+  #Logocontainer, #Logocontainer img {
     width: 25rem;
     height: 25rem;
   }
@@ -434,7 +431,7 @@ button:hover {
      font-size: 2rem;
    }
 
-  .logo {
+  #Logocontainer, #Logocontainer img {
     width: 25rem;
     height: 25rem;
   }
@@ -445,16 +442,16 @@ button:hover {
     font-size: 5rem;
   }
 
-   h2, #TopicName {
-     font-size: 1.5rem;
-   }
+  h2, #TopicName {
+    font-size: 1.5rem;
+  }
 
-   h3 {
-     visibility: none;
-     opacity: 0
-   }
+  h3 {
+    visibility: none;
+    opacity: 0
+  }
 
-  .logo {
+  #Logocontainer, #Logocontainer img {
     width: 20rem;
     height: 20rem;
   }
