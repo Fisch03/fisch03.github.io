@@ -28,7 +28,6 @@ body {
 }
 
 #IEWarning {
-  overflow: visible;
   color: #FF0000;
 
   font-family: 'Roboto', sans-serif;
