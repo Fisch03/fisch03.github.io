@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+   <url>
+      <loc>https://fisch03.xyz/</loc>
+      <lastmod>2020-01-04</lastmod>
+      <changefreq>daily</changefreq>
+      <priority>1.0</priority>
+   </url>
+   <url>
+     <loc>https://fisch03.xyz/resources/descriptions/Astroattack.html</loc>
+     <lastmod>2020-01-03</lastmod>
+     <changefreq>never</changefreq>
+     <priority>0.5</priority>
+   </url>
+   <url>
+     <loc>https://fisch03.xyz/resources/descriptions/Floatingpoints.html</loc>
+     <lastmod>2020-01-03</lastmod>
+     <changefreq>monthly</changefreq>
+     <priority>0.5</priority>
+   </url>
+   <url>
+     <loc>https://fisch03.xyz/resources/descriptions/Gravitoids.html</loc>
+     <lastmod>2020-01-03</lastmod>
+     <changefreq>never</changefreq>
+     <priority>0.5</priority>
+   </url>
+   <url>
+     <loc>https://fisch03.xyz/resources/descriptions/Hanako.html</loc>
+     <lastmod>2020-01-03</lastmod>
+     <changefreq>never</changefreq>
+     <priority>0.5</priority>
+   </url>
+</urlset>
