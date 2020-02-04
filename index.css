@@ -377,8 +377,8 @@ button:hover {
 }
 
 .fromtopease {
-  -webkit-animation: moveFromTop .8s ease-in-out both;
-	animation: moveFromTop .8s ease-in-out both;
+  -webkit-animation: moveFromTop .8s ease both;
+	animation: moveFromTop .8s ease both;
 }
 @-webkit-keyframes moveFromTop {
 	from { -webkit-transform: translateY(-100%); }
@@ -388,8 +388,8 @@ button:hover {
 }
 
 .frombottomease {
-	-webkit-animation: moveFromBottom .8s ease-in-out both;
-	animation: moveFromBottom .8s ease-in-out both;
+	-webkit-animation: moveFromBottom .8s ease both;
+	animation: moveFromBottom .8s ease both;
 }
 @-webkit-keyframes moveFromBottom {
 	from { -webkit-transform: translateY(100%); }
@@ -437,7 +437,7 @@ button:hover {
   }
 }
 
-@media screen and (max-height: 510px) {
+@media screen and (max-height: 540px) {
   h1 {
     font-size: 5rem;
   }
