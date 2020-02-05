@@ -36,6 +36,7 @@ function readDescriptionFile(filename, callback) {
     if(rawFile.readyState === 4) {
       if(rawFile.status === 200 || rawFile.status == 0) {
         descriptionBox.innerHTML = rawFile.responseText
+        Array.from(document.getElementsByClassName("descriptionHead")).forEach(function(element) {element.remove()})
       }
     }
   }
