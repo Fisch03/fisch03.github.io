@@ -1,2 +1,7 @@
+Sitemap: https://fisch03.xyz/sitemap.xml
+
 User-agent: *
-Disallow:
+Disallow: /resources/logo/logo1.svg
+Disallow: /resources/logo/logo2.svg
+Disallow: /resources/logo/logo3.svg
+Disallow: /resources/logo/logoouter.svg
