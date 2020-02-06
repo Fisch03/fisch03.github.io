@@ -5,3 +5,9 @@ Disallow: /resources/logo/logo1.svg
 Disallow: /resources/logo/logo2.svg
 Disallow: /resources/logo/logo3.svg
 Disallow: /resources/logo/logoouter.svg
+Disallow: /resources/arrowback.svg
+Disallow: /resources/GitHub-loho.svg
+Disallow: /resources/IE-logo.png
+Disallow: /resources/Instagram-logo.svg
+Disallow: /resources/Soundcloud-logo.svg
+Disallow: /resources/Youtube-logo.png
