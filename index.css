@@ -72,10 +72,10 @@ body {
   -ms-overflow-style: none;
 
   opacity: 1;
-  -webkit-transition: opacity 1s -webkit-filter 1s;
-  -moz-transition: opacity 1s -moz-filter 1s;
-  -o-transition: opacity 1s, -o-filter 1s;
-  transition: opacity 1s, filter 1s;
+  -webkit-transition: opacity 1s;
+  -moz-transition: opacity 1s;
+  -o-transition: opacity 1s;
+  transition: opacity 1s;
 }
 .currentpage::-webkit-scrollbar {
   display: none;
