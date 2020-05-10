@@ -14,9 +14,11 @@ html, body {
 
 body {
     overflow-x: hidden;
+    background-color: black;
+    color: white;
 }
 
-/* WIP
+/* WIP no u
 .darkmode {
   color: white;
   background-color: #121212;

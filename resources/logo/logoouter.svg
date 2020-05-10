@@ -31,7 +31,7 @@
   <defs
      id="defs4048" />
   <sodipodi:namedview
-     pagecolor="#ffffff"
+     pagecolor="#000000"
      bordercolor="#666666"
      borderopacity="1"
      objecttolerance="10"
@@ -57,13 +57,13 @@
      id="layer8"
      inkscape:label="Layer 5">
     <path
-       style="fill:#000000;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;fill-opacity:1"
+       style="fill:#ffffff;stroke:#ffffff;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;fill-opacity:1"
        d="m 1341.046,709.82763 c 230.1692,203.98233 231.5475,204.67146 231.5475,204.67146 l -2.0674,-244.64097 c 0,0 -5.4546,-82.03958 -82.0064,-68.91295 0,0 1.3783,-3.44564 -147.4737,108.88246 z"
        id="path4504"
        inkscape:connector-curvature="0"
        sodipodi:nodetypes="cccsc" />
     <path
-       style="fill:#000000;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;fill-opacity:0.9852941"
+       style="fill:#ffffff;stroke:#ffffff;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;fill-opacity:0.9852941"
        d="M 707.54237,1226.017 273.85593,843.00847 c 0,0 -116.67698,44.12783 -54.57627,116.94916 9.83754,11.53582 488.26271,266.05937 488.26271,266.05937 z"
        id="path5325"
        inkscape:connector-curvature="0"

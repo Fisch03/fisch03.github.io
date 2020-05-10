@@ -31,7 +31,7 @@
   <defs
      id="defs4048" />
   <sodipodi:namedview
-     pagecolor="#ffffff"
+     pagecolor="#000000"
      bordercolor="#666666"
      borderopacity="1"
      objecttolerance="10"
@@ -57,6 +57,7 @@
      id="layer5"
      inkscape:label="Layer 2">
     <path
+       style="fill:#ffffff;"
        d="m 500.9322,719.2373 435.63564,387.8814 -152.0339,87.7118 -441.48309,-390.8051 z"
        id="rect4124"
        inkscape:connector-curvature="0"
