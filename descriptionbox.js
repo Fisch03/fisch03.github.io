@@ -8,6 +8,15 @@ window.addEventListener('click', function(e){
   }
 });
 
+function showDescription() {
+  currentPage.classList.add("backgroundelements")
+  document.body.classList.add("hidescroll")
+  descriptionBox.style.visibility = "visible"
+  descriptionBox.classList.remove("hideintop")
+  descriptionBox.classList.add("movetocenter")
+  setTimeout(function() {descriptionVisible = true}, 1000)
+}
+
 function hideDescription() {
   currentPage.classList.remove("backgroundelements")
   document.body.classList.remove("hidescroll")
@@ -19,14 +28,51 @@ function hideDescription() {
 
 function imgToDescription(element) {
   readDescriptionFile(`${element.id.replace("Img","")}.html`)
-
   descriptionBox.innerHTML = "<h2>Loading...<h2>"
-  currentPage.classList.add("backgroundelements")
-  document.body.classList.add("hidescroll")
-  descriptionBox.style.visibility = "visible"
-  descriptionBox.classList.remove("hideintop")
-  descriptionBox.classList.add("movetocenter")
-  setTimeout(function() {descriptionVisible = true}, 1000)
+
+  showDescription()
+}
+
+function imgToFullscreenImg(element) {
+  descriptionBox.innerHTML = `
+  <style>
+    img {
+      height: 100%;
+    }
+    #DescriptionBox {
+      overflow: hidden;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      padding: 0;
+      width: auto;
+    }
+  </style>
+  <img src=${element.src.replace(/(\.[\w\d_-]+)$/i, '_full$1')}></img>
+  `
+  showDescription()
+}
+
+function imgToFullscreenVideo(element) {
+  descriptionBox.innerHTML = `
+  <style>
+    video {
+      height: 100%;
+    }
+    #DescriptionBox {
+      overflow: hidden;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      padding: 0;
+      width: auto;
+    }
+  </style>
+  <video src=${element.src.replace(/(\.[\w\d_-]+)$/i, '.mp4')} autoplay></video>
+  `
+  showDescription()
 }
 
 function readDescriptionFile(filename, callback) {
