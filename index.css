@@ -147,8 +147,8 @@ h4 {
   width: 35rem;
   height: 35rem;
 
-  -webkit-filter: drop-shadow(3px, 3px, 3px, rgba(0, 0, 0, 1))
-  filter: drop-shadow(3px, 3px, 3px, rgba(0, 0, 0, 1))
+  -webkit-filter: drop-shadow(3px, 3px, 3px, rgba(0, 0, 0, 1));
+  filter: drop-shadow(3px, 3px, 3px, rgba(0, 0, 0, 1));
 
   -webkit-transition: top 1s;
   -moz-transition: top 1s;
