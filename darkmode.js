@@ -10,6 +10,8 @@ function changeToDarkmode(imageButton){
         document.getElementById("SoundcloudLogo").src = "resources/Soundcloud-logo_dark.svg";
         document.getElementById("YoutubeLogo").src = "resources/Youtube-logo_dark.svg";
         document.getElementById("ArrowBackButton").src = "resources/arrowback_dark.svg";
+        document.getElementById("ArrowBackButton2").src = "resources/arrowback_dark.svg";
+        document.getElementById("ArrowBackButton3").src = "resources/arrowback_dark.svg";
         document.getElementById("LogoCode").src = "resources/logo/logo1_dark.svg";
         document.getElementById("Logo3D").src = "resources/logo/logo2_dark.svg";
         document.getElementById("LogoMusic").src = "resources/logo/logo3_dark.svg";
@@ -27,6 +29,8 @@ function changeToDarkmode(imageButton){
         document.getElementById("SoundcloudLogo").src = "resources/Soundcloud-logo.svg";
         document.getElementById("YoutubeLogo").src = "resources/Youtube-logo.svg";
         document.getElementById("ArrowBackButton").src = "resources/arrowback.svg";
+        document.getElementById("ArrowBackButton2").src = "resources/arrowback.svg";
+        document.getElementById("ArrowBackButton3").src = "resources/arrowback.svg";
         document.getElementById("LogoCode").src = "resources/logo/logo1.svg";
         document.getElementById("Logo3D").src = "resources/logo/logo2.svg";
         document.getElementById("LogoMusic").src = "resources/logo/logo3.svg";
