@@ -14,16 +14,12 @@ html, body {
 
 body {
     overflow-x: hidden;
-    background-color: black;
-    color: white;
 }
 
-/* WIP no u
 .darkmode {
+  background-color: black;
   color: white;
-  background-color: #121212;
 }
-*/
 
 .hidescroll {
   overflow-y: hidden;

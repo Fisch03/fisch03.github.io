@@ -20,7 +20,7 @@
      id="defs2" />
   <sodipodi:namedview
      id="base"
-     pagecolor="#ffffff"
+     pagecolor="#000000"
      bordercolor="#666666"
      borderopacity="1.0"
      inkscape:pageopacity="0.0"
@@ -54,7 +54,7 @@
      id="layer1"
      transform="translate(0,-197)">
     <path
-       style="fill:#000000;fill-opacity:0.98529412;stroke-width:0.3647182"
+       style="fill:#ffffff;fill-opacity:0.98529412;stroke-width:0.3647182"
        d="M 49.997475,222.50253 99.494949,272 49.997475,236.64466 0.5,272 Z"
        id="rect25"
        inkscape:connector-curvature="0"

@@ -1,6 +1,7 @@
 const descriptionBox = document.getElementById("DescriptionBox")
 const descriptionPath = "./resources/descriptions"
 let descriptionVisible = false
+import { darkmode } from './darkmode.js'
 
 window.addEventListener('click', function(e){
   if (!descriptionBox.contains(e.target) && descriptionVisible) {
@@ -27,7 +28,12 @@ function hideDescription() {
 }
 
 function imgToDescription(element) {
-  readDescriptionFile(`${element.id.replace("Img","")}.html`)
+  if (darkmode){
+    readDescriptionFile(`${element.id.replace("Img","")}_dark.html`)
+  } else {
+    readDescriptionFile(`${element.id.replace("Img","")}.html`)
+  }
+  
   descriptionBox.innerHTML = "<h2>Loading...<h2>"
 
   showDescription()

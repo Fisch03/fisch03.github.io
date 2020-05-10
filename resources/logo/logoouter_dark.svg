@@ -14,7 +14,7 @@
    width="1840"
    height="1840"
    viewBox="0 0 1840 1840"
-   sodipodi:docname="logo2.svg"
+   sodipodi:docname="logoouter.svg"
    inkscape:version="0.92.1 r15371">
   <metadata
      id="metadata4050">
@@ -31,7 +31,7 @@
   <defs
      id="defs4048" />
   <sodipodi:namedview
-     pagecolor="#ffffff"
+     pagecolor="#000000"
      bordercolor="#666666"
      borderopacity="1"
      objecttolerance="10"
@@ -43,24 +43,30 @@
      inkscape:window-height="728"
      id="namedview4046"
      showgrid="false"
-     showguides="true"
+     showguides="false"
      units="px"
-     inkscape:zoom="0.72555304"
-     inkscape:cx="795.04306"
-     inkscape:cy="1022.2557"
+     inkscape:zoom="0.25652174"
+     inkscape:cx="449.78721"
+     inkscape:cy="794.17236"
      inkscape:window-x="0"
      inkscape:window-y="0"
      inkscape:window-maximized="1"
-     inkscape:current-layer="layer6" />
+     inkscape:current-layer="layer8" />
   <g
      inkscape:groupmode="layer"
-     id="layer6"
-     inkscape:label="Layer 3">
+     id="layer8"
+     inkscape:label="Layer 5">
     <path
-       style="fill:#000000;"
-       d="m 575.46228,685.05317 150.15196,-82.36111 438.28636,379.66227 -150.5368,90.96507 z"
-       id="rect4214"
+       style="fill:#ffffff;stroke:#ffffff;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;fill-opacity:1"
+       d="m 1341.046,709.82763 c 230.1692,203.98233 231.5475,204.67146 231.5475,204.67146 l -2.0674,-244.64097 c 0,0 -5.4546,-82.03958 -82.0064,-68.91295 0,0 1.3783,-3.44564 -147.4737,108.88246 z"
+       id="path4504"
        inkscape:connector-curvature="0"
-       sodipodi:nodetypes="ccccc" />
+       sodipodi:nodetypes="cccsc" />
+    <path
+       style="fill:#ffffff;stroke:#ffffff;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;fill-opacity:0.9852941"
+       d="M 707.54237,1226.017 273.85593,843.00847 c 0,0 -116.67698,44.12783 -54.57627,116.94916 9.83754,11.53582 488.26271,266.05937 488.26271,266.05937 z"
+       id="path5325"
+       inkscape:connector-curvature="0"
+       sodipodi:nodetypes="ccsc" />
   </g>
 </svg>
