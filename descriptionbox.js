@@ -27,14 +27,17 @@ function hideDescription() {
 }
 
 function imgToDescription(element) {
-  if (darkmode.darkmode){
+  console.log("darkmode = " + darkmodeEnabled)
+  if (darkmodeEnabled){
     readDescriptionFile(`${element.id.replace("Img","")}_dark.html`)
+    descriptionBox.style = "background-color: #2E2E2E;"
   } else {
     readDescriptionFile(`${element.id.replace("Img","")}.html`)
+    descriptionBox.style = ""
   }
 
   descriptionBox.innerHTML = "<h2>Loading...<h2>"
-
+  
   showDescription()
 }
 

@@ -32,15 +32,15 @@
         <div id="TopicName"></div>
       </div>
       <div id="Social">
-        <a href="https://github.com/Fisch03"><img src="resources/GitHub-logo.svg" alt="My GitHub"></a>
-        <a href="https://www.instagram.com/derfisch03/"><img src="resources/Instagram-logo.svg" alt="My Instagram"></a>
-        <a href="https://soundcloud.com/fisch03"><img src="resources/Soundcloud-logo.svg"alt="My Soundcloud"></a>
-        <a href="https://www.youtube.com/channel/UC2cX-j1i-UZHFn-H5BGrdUQ"><img src="resources/Youtube-logo.svg" alt="My Youtube"></a>
-        <a href="#"><img src="resources/darkmode.svg" alt="Toggle Darkmode" onclick="changeToDarkmode(this)"/></a>
+        <a href="https://github.com/Fisch03"><img id="GitHubLogo" src="resources/GitHub-logo.svg" alt="My GitHub"></a>
+        <a href="https://www.instagram.com/derfisch03/"><img id="InstagramLogo" src="resources/Instagram-logo.svg" alt="My Instagram"></a>
+        <a href="https://soundcloud.com/fisch03"><img id="SoundcloudLogo" src="resources/Soundcloud-logo.svg"alt="My Soundcloud"></a>
+        <a href="https://www.youtube.com/channel/UC2cX-j1i-UZHFn-H5BGrdUQ"><img id="YoutubeLogo" src="resources/Youtube-logo.svg" alt="My Youtube"></a>
+        <a href="#"><img src="resources/darkmode.svg" id="DarkModeToggle" alt="Toggle Darkmode" onclick="changeToDarkmode(this)"/></a>
       </div>
     </div>
     <div class="page" id="Coding">
-      <img src="resources/arrowback.svg" class="backbutton" onclick="transitionToHome();" alt="Go back">
+      <img src="resources/arrowback.svg" id="ArrowBackButton" class="backbutton" onclick="transitionToHome();" alt="Go back">
       <h1 class="spacing">Coding</h1>
       <h2>Games</h2>
       <div class="flexlist">
@@ -74,7 +74,7 @@
       <h1 class="spacing">Music</h1>
       <h2>Coming soon...</h2>
     </div>
-    <div id="DescriptionBox" style="background-color: #2E2E2E;" class="hideintop"></div>
+    <div id="DescriptionBox" class="hideintop"></div>
   </body>
   <script src="darkmode.js"></script>
   <script src="iewarning.js"></script>
