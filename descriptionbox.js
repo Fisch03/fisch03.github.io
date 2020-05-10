@@ -39,10 +39,38 @@ function imgToFullscreenImg(element) {
     img {
       height: 100%;
     }
+    #DescriptionBox {
+      overflow: hidden;
+      display: flex;
+      justify-content: center;
+      align-items: center;
 
-    
+      padding: 0;
+      width: auto;
+    }
   </style>
-  <img src=${element.src}></img>
+  <img src=${element.src.replace(/(\.[\w\d_-]+)$/i, '_full$1')}></img>
+  `
+  showDescription()
+}
+
+function imgToFullscreenVideo(element) {
+  descriptionBox.innerHTML = `
+  <style>
+    video {
+      height: 100%;
+    }
+    #DescriptionBox {
+      overflow: hidden;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      padding: 0;
+      width: auto;
+    }
+  </style>
+  <video src=${element.src.replace(/(\.[\w\d_-]+)$/i, '.mp4')} autoplay></video>
   `
   showDescription()
 }

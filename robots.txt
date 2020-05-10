@@ -11,3 +11,5 @@ Disallow: /resources/IE-logo.png
 Disallow: /resources/Instagram-logo.svg
 Disallow: /resources/Soundcloud-logo.svg
 Disallow: /resources/Youtube-logo.png
+Disallow: /resources/3d/*
+Allow: /resources/3d/*_full*
