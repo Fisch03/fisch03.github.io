@@ -8,6 +8,15 @@ window.addEventListener('click', function(e){
   }
 });
 
+function showDescription() {
+  currentPage.classList.add("backgroundelements")
+  document.body.classList.add("hidescroll")
+  descriptionBox.style.visibility = "visible"
+  descriptionBox.classList.remove("hideintop")
+  descriptionBox.classList.add("movetocenter")
+  setTimeout(function() {descriptionVisible = true}, 1000)
+}
+
 function hideDescription() {
   currentPage.classList.remove("backgroundelements")
   document.body.classList.remove("hidescroll")
@@ -19,14 +28,23 @@ function hideDescription() {
 
 function imgToDescription(element) {
   readDescriptionFile(`${element.id.replace("Img","")}.html`)
-
   descriptionBox.innerHTML = "<h2>Loading...<h2>"
-  currentPage.classList.add("backgroundelements")
-  document.body.classList.add("hidescroll")
-  descriptionBox.style.visibility = "visible"
-  descriptionBox.classList.remove("hideintop")
-  descriptionBox.classList.add("movetocenter")
-  setTimeout(function() {descriptionVisible = true}, 1000)
+
+  showDescription()
+}
+
+function imgToFullscreenImg(element) {
+  descriptionBox.innerHTML = `
+  <style>
+    img {
+      height: 100%;
+    }
+
+    
+  </style>
+  <img src=${element.src}></img>
+  `
+  showDescription()
 }
 
 function readDescriptionFile(filename, callback) {
