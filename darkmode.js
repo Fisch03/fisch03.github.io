@@ -1,3 +1,5 @@
+//TODO: Preload Dark mode Images to avoid images "lagging behind" on first toggle
+
 let darkMode = false
 
 function toggleMode() {
