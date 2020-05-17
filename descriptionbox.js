@@ -34,30 +34,21 @@ function imgToDescription(element) {
 }
 
 function imgToFullscreenImg(element) {
-  descriptionBox.innerHTML = `
-  <style>
-    img {
-      height: 100%;
-    }
-    #DescriptionBox {
-      overflow: hidden;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-
-      padding: 0;
-      width: auto;
-    }
-  </style>
-  <img src=${element.src.replace(/(\.[\w\d_-]+)$/i, '_full$1')}></img>
-  `
+  descriptionBox.innerHTML = `<img src=${element.src.replace(/(\.[\w\d_-]+)$/i, '_full$1')}></img>`
+  overrideDescStyle()
   showDescription()
 }
 
 function imgToFullscreenVideo(element) {
-  descriptionBox.innerHTML = `
+  descriptionBox.innerHTML = `<video src=${element.src.replace(/(\.[\w\d_-]+)$/i, '.mp4')} autoplay></video>`
+  overrideDescStyle()
+  showDescription()
+}
+
+function overrideDescStyle() {
+  descriptionBox.innerHTML += `
   <style>
-    video {
+    img, video {
       height: 100%;
     }
     #DescriptionBox {
@@ -66,13 +57,13 @@ function imgToFullscreenVideo(element) {
       justify-content: center;
       align-items: center;
 
+      min-width: 10vw;
+
       padding: 0;
       width: auto;
     }
   </style>
-  <video src=${element.src.replace(/(\.[\w\d_-]+)$/i, '.mp4')} autoplay></video>
   `
-  showDescription()
 }
 
 function readDescriptionFile(filename, callback) {
