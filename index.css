@@ -16,13 +16,6 @@ body {
     overflow-x: hidden;
 }
 
-/* WIP
-.darkmode {
-  color: white;
-  background-color: #121212;
-}
-*/
-
 .hidescroll {
   overflow-y: hidden;
 }
@@ -169,6 +162,26 @@ h4 {
   visibility: hidden;
 }
 
+#DarkModeButton {
+  width: 3rem;
+  position: absolute;
+
+  top: 100%;
+  left: 0.7rem;
+
+  transform: translate(0, -3.5rem);
+  margin-bottom: 0.5rem;
+
+  -webkit-transition: all 1s;
+  -moz-transition: all 1s;
+  -o-transition: all 1s;
+  transition: all 1s;
+}
+#DarkModeButton:hover {
+  transform: translate(0, -4.3rem);
+  margin-bottom: 1.3rem;
+}
+
 #Social {
   display: flex;
   position: absolute;
@@ -182,7 +195,6 @@ h4 {
   margin-right: 0.7rem;
   margin-bottom: 0.5rem;
 }
-
 #Social img {
   width: 3rem;
 
@@ -341,6 +353,10 @@ button:hover {
   padding-top: 74%;
 }
 
+.dark {
+  color: white !important;
+  background-color: #121212 !important;
+}
 
 /* ANIMATIONS */
 .ontop {
