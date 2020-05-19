@@ -1,5 +1,3 @@
-//TODO: Preload Dark mode Images to avoid images "lagging behind" on first toggle
-
 let darkMode = false
 
 //Preload all images to make a toggle appear smoother
