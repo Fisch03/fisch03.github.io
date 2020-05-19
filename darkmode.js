@@ -1,5 +1,10 @@
 let darkMode = false
 
+//Preload all images to make a toggle appear smoother
+preloadImage("resources/lightmode.svg")
+Array.from(document.getElementsByClassName("backbutton")).forEach(function(element) {preloadImage(element.src.replace(/(\.[\w\d_-]+)$/i, '_dark$1'))})
+Array.from(document.getElementsByClassName("modetoggleable")).forEach(function(element) {preloadImage(element.src.replace(/(\.[\w\d_-]+)$/i, '_dark$1'))})
+
 function toggleMode() {
   if(darkMode) {
     document.getElementById("DarkModeButton").src = "resources/darkmode.svg"
@@ -18,13 +23,13 @@ function toggleMode() {
   }
 }
 
-//Thanks to Samyocord
-//check if user has darkmode enabled in browser
-function isDarkModeEnabledInBrowser() {
-    return window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches
+function preloadImage(path) {
+  var img = new Image()
+  img.src = path
 }
 
-//actually changes to darkmode if user has darkmode enabled in browser
-if (isDarkModeEnabledInBrowser()){
+//Thanks to Samyocord
+//Change to Darkmode if the Browser requests it
+if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
     toggleMode()
 }
