@@ -102,6 +102,7 @@ container.onclick = function(e) {
   }
 }
 
+//TODO: Break on finding hovered Element
 function checkHover(mousepos) {
   let anyhovered = false
   reactiveElements.forEach(function(rect, index) {
