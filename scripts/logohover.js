@@ -30,17 +30,17 @@ const reactiveElements = [
     a: {x:47, y:28},
     b: {x:85, y:67},
     r: 41,
-    el: document.getElementById("LogoMusic"),
-    target: "Music",
-    topic: "Music"
+    el: document.getElementById("Electronics"),
+    target: "Electronics",
+    topic: "Electronics"
   }, {
     i: 3,
     a: {x:70, y:41},
     b: {x:85, y:67},
     r: 41,
-    el: document.getElementById("LogoMusic"),
-    target: "Music",
-    topic: "Music"
+    el: document.getElementById("LogoElectronics"),
+    target: "Electronics",
+    topic: "Electronics"
  }
 ]
 
@@ -102,7 +102,6 @@ container.onclick = function(e) {
   }
 }
 
-//TODO: Break on finding hovered Element
 function checkHover(mousepos) {
   let anyhovered = false
   for (const [index, rect] of reactiveElements.entries()) {
