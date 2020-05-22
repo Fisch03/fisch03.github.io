@@ -1,5 +1,4 @@
 const descriptionBox = document.getElementById("DescriptionBox")
-const descriptionPath = "./resources/descriptions"
 let descriptionVisible = false
 
 window.addEventListener('click', function(e){
@@ -27,9 +26,8 @@ function hideDescription() {
 }
 
 function imgToDescription(element) {
-  readDescriptionFile(`${element.id.replace("Img","")}.html`)
+  readDescriptionFile(element.src.replace(/(\.[\w\d_-]+)$/i, '.html'))
   descriptionBox.innerHTML = "<h2>Loading...<h2>"
-
   showDescription()
 }
 
@@ -68,7 +66,7 @@ function overrideDescStyle() {
 
 function readDescriptionFile(filename, callback) {
   var rawFile = new XMLHttpRequest()
-  rawFile.open("GET", `${descriptionPath}/${filename}`, true)
+  rawFile.open("GET", filename, true)
   rawFile.onreadystatechange = function () {
     if(rawFile.readyState === 4) {
       if(rawFile.status === 200 || rawFile.status == 0) {
