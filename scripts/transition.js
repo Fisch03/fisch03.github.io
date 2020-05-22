@@ -94,6 +94,8 @@ function transitionToBottom(targetid) {
     document.body.classList.remove("hidescroll")
 
     window.location.hash = targetid
+
+    imgsize = {w: container.clientWidth, h: container.clientHeight}
   }, 900)
 }
 
