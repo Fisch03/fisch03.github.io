@@ -16,7 +16,6 @@ function toggleMode() {
     darkMode = false
   } else {
     setCookie("darkMode", "true", 365)
-    document.cookie = "username=John Doe; expires=Thu, 18 Dec 2013 12:00:00 UTC; path=/"
     document.getElementById("DarkModeButton").src = "resources/lightmode.svg"
     document.getElementById("DescriptionBox").classList.add("dark")
     Array.from(document.getElementsByClassName("page")).forEach(function(element) {element.classList.add("dark")})
