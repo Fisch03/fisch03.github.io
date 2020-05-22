@@ -105,7 +105,7 @@ container.onclick = function(e) {
 //TODO: Break on finding hovered Element
 function checkHover(mousepos) {
   let anyhovered = false
-  reactiveElements.forEach(function(rect, index) {
+  for (const [index, rect] of reactiveElements.entries()) {
       if(isInsideRectangle(mousepos, rect)) {
         rect.el.classList.add("hovered")
         if(!insideElement[index] && currentTopicIndex != rect.i) {
@@ -114,11 +114,12 @@ function checkHover(mousepos) {
         insideElement[index] = true
         currentTopicIndex = rect.i
         anyhovered = true
+        break;
       } else {
         rect.el.classList.remove("hovered")
         insideElement[index] = false
       }
-  })
+  }
 
   if(!anyhovered && currentTopicIndex != 0) {
     blendTopic("")
