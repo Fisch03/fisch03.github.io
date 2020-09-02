@@ -34,12 +34,14 @@ function imgToDescription(element) {
 function imgToFullscreenImg(element) {
   descriptionBox.innerHTML = `<img src=${element.src.replace(/(\.[\w\d_-]+)$/i, '_full$1')}></img>`
   overrideDescStyle()
+  addControls(element.src.replace(/(\.[\w\d_-]+)$/i, '_full$1'))
   showDescription()
 }
 
 function imgToFullscreenVideo(element) {
-  descriptionBox.innerHTML = `<video src=${element.src.replace(/(\.[\w\d_-]+)$/i, '.mp4')} autoplay></video>`
+  descriptionBox.innerHTML = `<video src=${element.src.replace(/(\.[\w\d_-]+)$/i, '.mp4')} autoplay loop></video>`
   overrideDescStyle()
+  addControls(element.src.replace(/(\.[\w\d_-]+)$/i, '.mp4'))
   showDescription()
 }
 
@@ -64,6 +66,10 @@ function overrideDescStyle() {
   `
 }
 
+function addControls(expandLocation) {
+  descriptionBox.innerHTML += `<img src=resources/expand${darkMode ? "_dark":""}.svg class="controls" onclick="window.location='${expandLocation}'"></img>`
+}
+
 function readDescriptionFile(filename, callback) {
   var rawFile = new XMLHttpRequest()
   rawFile.open("GET", filename, true)
@@ -71,6 +77,7 @@ function readDescriptionFile(filename, callback) {
     if(rawFile.readyState === 4) {
       if(rawFile.status === 200 || rawFile.status == 0) {
         descriptionBox.innerHTML = rawFile.responseText
+        addControls(filename)
         Array.from(document.getElementsByClassName("descriptionHead")).forEach(function(element) {element.remove()})
       }
     }

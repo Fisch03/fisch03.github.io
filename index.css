@@ -296,6 +296,24 @@ h4 {
   top: 50%;
 }
 
+.controls {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  width: 2.5rem;
+  height: 2.5rem;
+  background-color: rgba(255,255,255,0.6);
+  border-radius: 10px;
+  -webkit-transition: width 0.5s, height 0.5s;
+  -moz-transition: width 0.5s, height 0.5s;
+  -o-transition: width 0.5s, height 0.5s;
+  transition: width 0.5s, height 0.5s;
+}
+.controls:hover {
+  width: 3rem;
+  height: 3rem;
+}
+
 .backbutton {
   position: absolute;
   width: 4rem;
