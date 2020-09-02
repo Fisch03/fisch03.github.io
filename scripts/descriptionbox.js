@@ -32,7 +32,7 @@ function imgToDescription(element) {
 }
 
 function imgToFullscreenImg(element) {
-  descriptionBox.innerHTML = `<img src=${element.src.replace(/(\.[\w\d_-]+)$/i, '_full$1')}></img>`
+  descriptionBox.innerHTML = `<img src=${element.src.replace(/(\.[\w\d_-]+)$/i, '_full.png')}></img>`
   overrideDescStyle()
   addControls(element.src.replace(/(\.[\w\d_-]+)$/i, '_full$1'))
   showDescription()
