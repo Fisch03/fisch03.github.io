@@ -164,13 +164,13 @@ h4 {
 
 #DarkModeButton {
   width: 3rem;
+  height: 3rem;
   position: absolute;
 
   top: 100%;
-  left: 0.7rem;
+  right: 100%;
 
-  transform: translate(0, -3.5rem);
-  margin-bottom: 0.5rem;
+  transform: translate(calc(100% + 0.7rem), calc(-100% - 0.5rem));
 
   -webkit-transition: all 1s;
   -moz-transition: all 1s;
@@ -178,8 +178,7 @@ h4 {
   transition: all 1s;
 }
 #DarkModeButton:hover {
-  transform: translate(0, -4.3rem);
-  margin-bottom: 1.3rem;
+  padding-bottom: 0.8rem;
 }
 
 #Social {
