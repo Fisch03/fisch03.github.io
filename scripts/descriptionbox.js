@@ -31,12 +31,13 @@ function imgToDescription(element) {
   showDescription()
 }
 
-function imgToFullscreenImg(element) {
-  descriptionBox.innerHTML = `<img src=${element.src.replace(/(\.[\w\d_-]+)$/i, '_full.png')}></img>`
+function imgToFullscreenImg(element, extension = "png") {
+  descriptionBox.innerHTML = `<img src=${element.src.replace(/(\.[\w\d_-]+)$/i, `_full.${extension}`)}></img>`
   overrideDescStyle()
-  addControls(element.src.replace(/(\.[\w\d_-]+)$/i, '_full$1'))
+  addControls(element.src.replace(/(\.[\w\d_-]+)$/i, `_full.${extension}`))
   showDescription()
 }
+
 
 function imgToFullscreenVideo(element) {
   descriptionBox.innerHTML = `<video src=${element.src.replace(/(\.[\w\d_-]+)$/i, '.mp4')} autoplay loop></video>`

@@ -212,6 +212,8 @@ h4 {
 .flexlist {
   display: flex;
 
+  align-content: stretch;
+
   justify-content: space-around;
   flex-wrap: wrap;
 
@@ -231,11 +233,14 @@ h4 {
 
 .flexlist div img {
   position: relative;
-  width: 15rem;
+  min-width: 15rem;
+  height: 15rem;
   margin-left: auto;
   margin-right: auto;
   border-radius: 20px;
   top: 0;
+
+  object-fit: cover;
 
   box-shadow:  3px 3px 15px 2px rgba(0,0,0,0.6);
   -moz-box-shadow: 3px 3px 15px 2px rgba(0,0,0,0.6);

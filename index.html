@@ -23,7 +23,7 @@
         <img src="resources/logo/logo.png" id="LogoPNG" alt="Logo">
         <img src="resources/logo/logo1.svg" class="modetoggleable" id="LogoCode" alt="Logo Part 1/Coding">
         <img src="resources/logo/logo2.svg" class="modetoggleable" id="Logo3D" alt="Logo Part 2/3D">
-        <img src="resources/logo/logo3.svg" class="modetoggleable" id="LogoElectronics" alt="Logo Part 3/Electronics">
+        <img src="resources/logo/logo3.svg" class="modetoggleable" id="LogoPhotography" alt="Logo Part 3/Photography">
         <img src="resources/logo/logoouter.svg" class="modetoggleable" alt="Logo">
         <div id="TopicName"></div>
       </div>
@@ -76,10 +76,11 @@
         <div><img src="3d/donut.jpg" onclick="imgToFullscreenVideo(this)" id="Img" alt="Barrel render"></div>
       </div>
     </div>
-    <div class="page" id="Electronics">
+    <div class="page" id="Photography">
       <img src="resources/arrowback.svg" class="backbutton" onclick="transitionToHome();" alt="Go back">
-      <h1 class="spacing">Electronics</h1>
-      <h2>Coming soon...</h2>
+      <h1 class="spacing">Photography</h1>
+      <div class="listing" id="Listing-photography">
+      </div>
     </div>
     <div id="DescriptionBox" class="hideintop"></div>
   </body>
@@ -88,7 +89,10 @@
   <script src="scripts/logohover.js"></script>
   <script src="scripts/darkmode.js"></script>
   <script src="scripts/descriptionbox.js"></script>
+  <script src="scripts/listings.js"></script>
 
+  <!--
   <script async defer src="https://sa.fisch03.xyz/app.js"></script>
   <noscript><img src="https://sa.fisch03.xyz/image.gif" alt=""></noscript>
+  -->
 </html>

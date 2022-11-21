@@ -30,17 +30,17 @@ const reactiveElements = [
     a: {x:47, y:28},
     b: {x:85, y:67},
     r: 41,
-    el: document.getElementById("Electronics"),
-    target: "Electronics",
-    topic: "Electronics"
+    el: document.getElementById("LogoPhotography"),
+    target: "Photography",
+    topic: "Photography"
   }, {
     i: 3,
     a: {x:70, y:41},
     b: {x:85, y:67},
     r: 41,
-    el: document.getElementById("LogoElectronics"),
-    target: "Electronics",
-    topic: "Electronics"
+    el: document.getElementById("LogoPhotography"),
+    target: "Photography",
+    topic: "Photography"
  }
 ]
 
